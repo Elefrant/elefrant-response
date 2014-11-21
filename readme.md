@@ -1,6 +1,6 @@
 # Elefrant Response
 
-[![wercker status](https://app.wercker.com/status/48eecd26101598e32a0084fb5dca813e/s/master "wercker status")](https://app.wercker.com/project/bykey/48eecd26101598e32a0084fb5dca813e)
+[![wercker status](https://app.wercker.com/status/7417010487b754c63d30542f45e2047a/s/master "wercker status")](https://app.wercker.com/project/bykey/7417010487b754c63d30542f45e2047a)
 
 [![Dependency Status](https://gemnasium.com/Elefrant/elefrant-response.svg)](https://gemnasium.com/Elefrant/elefrant-response)
 
