@@ -1,6 +1,7 @@
 'use strict';
 
-var response = require('./lib/response');
+var configDefault = require('./config/codes.js'),
+	response = require('./lib/response');
 
 module.exports = {
 	enable: true,
@@ -8,8 +9,13 @@ module.exports = {
 	name: 'response',
 
 	paramServer: function (elefrant) {
+		var codes = configDefault;
+		if (elefrant && elefrant.getConfigComp) {
+			codes = elefrant.getConfigComp('codes', configDefault);
+		}
+
 		return {
-			formatters: response(elefrant.config.codes).format
+			formatters: response(codes).format
 		};
 	}
 };

@@ -1,39 +1,40 @@
-# Elefrant ORM
+# Elefrant Response
 
-[![wercker status](https://app.wercker.com/status/ed958a0d0e57a3d11084695e9728b6b1/s/master "wercker status")](https://app.wercker.com/project/bykey/ed958a0d0e57a3d11084695e9728b6b1)
+[![wercker status](https://app.wercker.com/status/48eecd26101598e32a0084fb5dca813e/s/master "wercker status")](https://app.wercker.com/project/bykey/48eecd26101598e32a0084fb5dca813e)
 
-[![Dependency Status](https://gemnasium.com/Elefrant/elefrant-orm.svg)](https://gemnasium.com/Elefrant/elefrant-orm)
+[![Dependency Status](https://gemnasium.com/Elefrant/elefrant-response.svg)](https://gemnasium.com/Elefrant/elefrant-response)
+
+
+Formatter for responses. Create a formatter for each type of `Content-Type`
 
 ## Install
 
 ```sh
-$ npm install --save elefrant-orm
+$ elefrant install elefrant-response
 ```
+
+## Config
+
+Copy `codes.js` from `./components/elefrant-response` to main **config** folder.
 
 
 ## Usage
 
-Elefrant orm connect [Waterline ORM](https://github.com/balderdashy/waterline) with Elefrant Framework
+Activate the component.
+
+
+Create your own formatter:
+
+* Create new file in `elefrant-response/lib/format/json.js`
+* Develop the code:
 
 ```js
-var orm = require('elefrant-orm');
-
-var options = {
-adapters: {/* .. Adapter .. */},
-connections: {/* .. Connections .. */},
-collections: {/* .. Collections .. */},
-};
-
-orm(options, function (err, models) {
-    if (err) {
-        console.log(err);
-    } else {
-        // Get models
-        // models.connections & models.collections
-        console.log(models);
-    }
-});
+return function customizedFormatJSON(req, res, body) {
+	...
+	return data;
+}
 ```
+
 
 ## License
 
